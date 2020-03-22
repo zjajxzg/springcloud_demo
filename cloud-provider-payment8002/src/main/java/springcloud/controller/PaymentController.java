@@ -1,11 +1,11 @@
-package com.springcloud.controller;
+package springcloud.controller;
 
 import com.springcloud.entities.CommonResult;
 import com.springcloud.entities.Payment;
-import com.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+import springcloud.service.PaymentService;
 
 import javax.annotation.Resource;
 
@@ -27,7 +27,7 @@ public class PaymentController {
         log.info("*******插入结果：{} serverPort: {}", result, serverPort);
 
         if (result > 0) {
-            return new CommonResult(200, "插入数据库成功， serverPort:" + serverPort, result);
+            return new CommonResult(200, "插入数据库成 serverPort: " + serverPort, result);
         } else {
             return new CommonResult(444, "插入数据库失败");
         }
