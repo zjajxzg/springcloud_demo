@@ -17,6 +17,9 @@ eureka:
     fetch-registry: true    #是否从服务端抓取已有的注册信息
     service-url:
       defaultZone: http://eureka7001.com/eureka, http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: pament8001
+    prefer-ip-address: true
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
